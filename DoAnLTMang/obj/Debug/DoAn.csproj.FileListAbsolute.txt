@@ -13,3 +13,27 @@ D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cac
 D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.CopyComplete
 D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.exe
 D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.pdb
+E:\Đồ án\DoAnLTMang\bin\Debug\DoAn.exe.config
+E:\Đồ án\DoAnLTMang\bin\Debug\DoAn.exe
+E:\Đồ án\DoAnLTMang\bin\Debug\DoAn.pdb
+E:\Đồ án\DoAnLTMang\bin\Debug\HtmlAgilityPack.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\HtmlAgilityPack.pdb
+E:\Đồ án\DoAnLTMang\bin\Debug\HtmlAgilityPack.xml
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.csproj.AssemblyReference.cache
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.Properties.Resources.resources
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.csproj.GenerateResource.cache
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.csproj.CopyComplete
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.exe
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.pdb
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.BetaCine.resources
+E:\Đồ án\DoAnLTMang\obj\Debug\DoAn.BetaFilm.resources
+E:\Đồ án\DoAnLTMang\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Core.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Core.xml
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
