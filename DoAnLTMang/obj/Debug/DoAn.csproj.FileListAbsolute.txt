@@ -1,0 +1,15 @@
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\DoAn.exe.config
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\DoAn.exe
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\DoAn.pdb
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\HtmlAgilityPack.dll
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\HtmlAgilityPack.pdb
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\bin\Debug\HtmlAgilityPack.xml
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.AssemblyReference.cache
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.SuggestedBindingRedirects.cache
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.Form1.resources
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.Properties.Resources.resources
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.GenerateResource.cache
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.csproj.CopyComplete
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.exe
+D:\Code\Laptrinhmangcanban\Lab1\DoAn\obj\Debug\DoAn.pdb
