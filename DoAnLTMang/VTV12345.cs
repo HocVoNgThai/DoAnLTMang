@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DoAn.BetaCine;
+using Microsoft.Win32.TaskScheduler;
+
 
 namespace DoAn
 {
@@ -126,7 +128,7 @@ namespace DoAn
                     Height = 70, // Adjust height
                     BorderStyle = BorderStyle.FixedSingle,
                     Location = new Point(xPosition, 0),
-                    Margin = new Padding(5)
+                    Margin = new Padding(5),
                 };
 
                 Label lblTime = new Label
@@ -154,9 +156,67 @@ namespace DoAn
                     Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)))
                 };
                 panel.Controls.Add(lblGenre);
+                panel.DoubleClick += (sender, e) =>
+                {
+                    listView1.Items.Add(new ListViewItem
+                        {
+                            Text  = show.Show_Time + ":00",
+                            SubItems = { show.Show_Title }
+                        }
+                    );
+                };
 
                 DisplayPanel.Controls.Add(panel);
                 xPosition += panel.Width + 10;
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0 && listView1.SelectedItems[0].SubItems.Count > 1)
+            {
+                DateTime dateTime;
+                if (DateTime.TryParse(listView1.SelectedItems[0].Text, out dateTime))
+                {
+                    string taskName = listView1.SelectedItems[0].SubItems[0].Text;
+                    if (string.IsNullOrWhiteSpace(taskName))
+                    {
+                        MessageBox.Show("Invalid task name.");
+                        return;
+                    }
+
+                    DateTime startTime = DateTime.Parse(listView1.SelectedItems[0].Text); // Schedule at least 1 minute in the future
+                    MessageBox.Show("Task scheduled at " + startTime.ToString("yyyy-MM-dd HH:mm:ss"));
+                    string executablePath = @"F:\Try to Code\HappyBirthdayProject\bin\Debug\HappyBirthdayProject.exe";
+
+                    CreateScheduledTask(taskName, startTime, executablePath);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid date format.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid selection.");
+            }
+        }
+
+        public void CreateScheduledTask(string taskName, DateTime startTime, string executablePath)
+        {
+            using (TaskService ts = new TaskService())
+            {
+                TaskDefinition td = ts.NewTask();
+                td.RegistrationInfo.Description = "TV Show Reminder";
+
+                Trigger trigger = new TimeTrigger() { StartBoundary = startTime };
+                td.Triggers.Add(trigger);
+
+                td.Actions.Add(new ExecAction(executablePath, null, null));
+
+                ts.RootFolder.RegisterTaskDefinition(@"test", td);
+                //taskName must be ASCII, no space, no special characters. If your language is not English, you should convert it to ASCII.
+                //keyword is: SanitizeTaskName
             }
         }
     }
