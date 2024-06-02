@@ -1,0 +1,96 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\vtv12345.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:vtv12345.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\vtv12345.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:vtv12345.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\vtv12345.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:vtv12345.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\betacine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:betacine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BetaCine.cs",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\BetaCine.cs",
+              "RelativeDocumentMoniker": "BetaCine.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\BetaCine.cs",
+              "RelativeToolTip": "BetaCine.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T03:46:43.86Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VTV12345.Designer.cs",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.Designer.cs",
+              "RelativeDocumentMoniker": "VTV12345.Designer.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.Designer.cs",
+              "RelativeToolTip": "VTV12345.Designer.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T07:56:37.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VTV12345.cs",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.cs",
+              "RelativeDocumentMoniker": "VTV12345.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.cs",
+              "RelativeToolTip": "VTV12345.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAgwDoAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T07:30:58.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VTV12345.cs [Design]",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.cs",
+              "RelativeDocumentMoniker": "VTV12345.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\VTV12345.cs [Design]",
+              "RelativeToolTip": "VTV12345.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T05:54:18.579Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

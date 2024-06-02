@@ -37,3 +37,28 @@ E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
 E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Core.xml
 E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
 E:\Đồ án\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\DoAn.exe.config
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\DoAn.exe
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\DoAn.pdb
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\HtmlAgilityPack.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Core.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\HtmlAgilityPack.pdb
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\HtmlAgilityPack.xml
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Core.xml
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.csproj.AssemblyReference.cache
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.BetaCine.resources
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.BetaFilm.resources
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.Properties.Resources.resources
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.csproj.GenerateResource.cache
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.csproj.CoreCompileInputs.cache
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.csproj.Up2Date
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.exe
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.pdb
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\obj\Debug\DoAn.VTV12345.resources
