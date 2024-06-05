@@ -47,6 +47,9 @@
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.2535.41, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.WebView2.1.0.2535.41\lib\net462\Microsoft.Web.WebView2.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -72,6 +75,18 @@
     <Compile Include="BetaFilm.Designer.cs">
       <DependentUpon>BetaFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPQG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPQG.Designer.cs">
+      <DependentUpon>CPQG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detail_CPQG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detail_CPQG.Designer.cs">
+      <DependentUpon>Detail_CPQG.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BetaCine.resx">
@@ -79,6 +94,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BetaFilm.resx">
       <DependentUpon>BetaFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPQG.resx">
+      <DependentUpon>CPQG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Detail_CPQG.resx">
+      <DependentUpon>Detail_CPQG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
