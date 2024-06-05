@@ -124,5 +124,11 @@ namespace DoAn
 
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LichChieuHTV lichChieuHTV = new LichChieuHTV();
+            lichChieuHTV.ShowDialog();
+        }
     }
 }

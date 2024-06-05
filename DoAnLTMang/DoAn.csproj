@@ -72,6 +72,12 @@
     <Compile Include="BetaFilm.Designer.cs">
       <DependentUpon>BetaFilm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LichChieuHTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LichChieuHTV.Designer.cs">
+      <DependentUpon>LichChieuHTV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BetaCine.resx">
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BetaFilm.resx">
       <DependentUpon>BetaFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LichChieuHTV.resx">
+      <DependentUpon>LichChieuHTV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

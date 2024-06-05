@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\lichchieuhtv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:lichchieuhtv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|d:\\laptrinh\\github\\doan-laptrinhmang\\doanltmang\\doanltmang\\lichchieuhtv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:lichchieuhtv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34D547CB-0508-4F8F-804B-B1413558319E}|DoAn.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBIAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T08:15:42.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LichChieuHTV.cs",
+              "DocumentMoniker": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\LichChieuHTV.cs",
+              "RelativeDocumentMoniker": "LichChieuHTV.cs",
+              "ToolTip": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\LichChieuHTV.cs",
+              "RelativeToolTip": "LichChieuHTV.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAAEAAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T14:57:49.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LichChieuHTV.cs [Design]",
+              "DocumentMoniker": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\LichChieuHTV.cs",
+              "RelativeDocumentMoniker": "LichChieuHTV.cs",
+              "ToolTip": "D:\\LapTrinh\\Github\\DoAn-LapTrinhMang\\DoAnLTMang\\DoAnLTMang\\LichChieuHTV.cs [Design]",
+              "RelativeToolTip": "LichChieuHTV.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T14:57:28.46Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
