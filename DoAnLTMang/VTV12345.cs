@@ -119,7 +119,7 @@ namespace DoAn
         {
             DisplayPanel.Controls.Clear();
             int xPosition = 0;
-
+            int i = 0;
             foreach (var show in Shows)
             {
                 Panel panel = new Panel
@@ -166,8 +166,15 @@ namespace DoAn
                     );
                 };
 
+                DateTime currentTime = DateTime.Now;
+                if (IsCurrentTimeWithinShowTime(currentTime.ToString("HH:mm"), show.Show_Time, i < Shows.Count - 1 ? Shows[i + 1].Show_Time : null))
+                {
+                    panel.BackColor = Color.SkyBlue; // Thay đổi màu sắc của panel
+                }
+
                 DisplayPanel.Controls.Add(panel);
                 xPosition += panel.Width + 10;
+                i++;
             }
         }
 
@@ -218,6 +225,32 @@ namespace DoAn
                 //taskName must be ASCII, no space, no special characters. If your language is not English, you should convert it to ASCII.
                 //keyword is: SanitizeTaskName
             }
+        }
+
+        private bool IsCurrentTimeWithinShowTime(string currentTime, string showStartTime, string showEndTime)
+        {
+            // Định dạng thời gian của show, giả sử định dạng là "HH:mm"
+            string[] formats = { "HH:mm", "H:mm" };
+
+            // Chuyển đổi chuỗi thời gian show thành đối tượng DateTime
+            if (DateTime.TryParseExact(showStartTime, formats, null, System.Globalization.DateTimeStyles.None, out DateTime start) && DateTime.TryParseExact(currentTime, formats, null, System.Globalization.DateTimeStyles.None, out DateTime current))
+            {
+                // Kiểm tra nếu có thời gian kết thúc
+                if (showEndTime != null && DateTime.TryParseExact(showEndTime, formats, null, System.Globalization.DateTimeStyles.None, out DateTime end))
+                {
+                    // Kiểm tra xem thời gian hiện tại có nằm trong khoảng thời gian của show không
+                    return current.TimeOfDay >= start.TimeOfDay && current.TimeOfDay < end.TimeOfDay;
+                }
+                else
+                {
+                    // Nếu không có thời gian kết thúc (chương trình cuối cùng trong ngày), chỉ so sánh thời gian bắt đầu
+                    // Hãy thay đổi return current >= start; thành return current == start; nếu muốn so sánh chính xác với thời gian bắt đầu.
+                    return current.TimeOfDay >= start.TimeOfDay;
+                }
+            }
+
+            // Nếu không chuyển đổi được, trả về false
+            return false;
         }
     }
 }
