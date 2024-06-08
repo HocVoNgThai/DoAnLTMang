@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,10 +62,39 @@ namespace DoAn
             var trailer = document.DocumentNode.SelectSingleNode("//*[@id=\"ctl00\"]/div/div/div/div/iframe");
             var linkTrailer = trailer.Attributes["src"].Value;
             MessageBox.Show("Connect successful");
-            if (webView21 != null && webView21.CoreWebView2 != null)
+            if (webView21 != null && webView21.CoreWebView2 != null && !string.IsNullOrEmpty(linkTrailer))
             {
                 webView21.CoreWebView2.Navigate(linkTrailer);
             }
+            var checkDateFilm = document.DocumentNode.SelectSingleNode("//*[@id=\"tab-content\"]/div");
+            var idDate = checkDateFilm.Attributes["id"].Value;
+            var timeFilm = document.DocumentNode.SelectNodes($"//*[@id=\"{idDate}\"]/div/div/a");
+            if (timeFilm != null)
+            {
+                var times = timeFilm.ToList();
+                List<string> lstTime = new List<string>();
+                foreach (HtmlNode time in times)
+                {
+                    lstTime.Add(time.InnerText);
+                }
+                for (int i = 0; i < lstTime.Count; i++)
+                {
+                    Button button1 = new Button();
+                    button1.Location = new System.Drawing.Point(227 + 118 * (i % 5) + 50, 528 + 40 * (i / 5) + 20);
+                    button1.Name = "btnDatLich";
+                    button1.Size = new System.Drawing.Size(110, 40);
+                    button1.TabIndex = 17;
+                    button1.Text = lstTime[i];
+                    button1.UseVisualStyleBackColor = true;
+                    button1.Click += (sender, e) =>
+                    {
+
+                    };
+                    this.Controls.Add(button1);
+                }
+            }
         }
+
+        
     }
 }

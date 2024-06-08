@@ -35,10 +35,14 @@ namespace DoAn
             Console.WriteLine(film.VideoUrl);
             string video_Url=film.VideoUrl;
             MessageBox.Show("Connect successful");
-            if (webView21 != null && webView21.CoreWebView2 != null)
+            try
             {
-                webView21.CoreWebView2.Navigate(video_Url);
+                if (webView21 != null && webView21.CoreWebView2 != null && !string.IsNullOrEmpty(video_Url))
+                {
+                    webView21.CoreWebView2.Navigate(video_Url);
+                }
             }
+            catch { }
         }
     }
 }
