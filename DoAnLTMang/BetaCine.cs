@@ -33,7 +33,7 @@ namespace DoAn
             Load_Movies();
         }
 
-       private void Load_Movies()
+        private void Load_Movies()
         {
             myClient = new WebClient();
             myClient.Encoding = System.Text.Encoding.UTF8;
@@ -51,7 +51,7 @@ namespace DoAn
             {
                 MessageBox.Show("Lỗi kết nối", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
 
 
             films = new List<Film>();
@@ -85,6 +85,7 @@ namespace DoAn
                 Pbx_MoviePoster.TabIndex = 0;
                 Pbx_MoviePoster.TabStop = false;
                 Pbx_MoviePoster.ImageLocation = films[i].Link_Img;
+                Pbx_MoviePoster.SizeMode = PictureBoxSizeMode.StretchImage;
                 Pbx_MoviePoster.DoubleClick += (sender, e) =>
                 {
                     BetaFilm betaFilm = new BetaFilm(linkFilm);
@@ -93,8 +94,8 @@ namespace DoAn
                 // 
                 // Label_MovieName
                 //
-                Label Label_MovieName= new Label();
-                
+                Label Label_MovieName = new Label();
+
                 Label_MovieName.AutoSize = true;
                 Label_MovieName.Location = new System.Drawing.Point(0, 409);
                 Label_MovieName.MaximumSize = new System.Drawing.Size(314, 75);
@@ -111,10 +112,10 @@ namespace DoAn
                 Panel_Carousel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
                 Panel_Carousel.Controls.Add(Label_MovieName);
                 Panel_Carousel.Controls.Add(Pbx_MoviePoster);
-                Panel_Carousel.Location = new System.Drawing.Point(56 + 315 *(i%3), 10+478 *(i/3));
+                Panel_Carousel.Location = new System.Drawing.Point(50 + 315 * (i % 3) + 30 * (i % 3 - 1), 30 + 478 * (i / 3) + 20 * (i / 3 - 1));
                 Panel_Carousel.Name = "Panel_Carousel";
                 Panel_Carousel.Size = new System.Drawing.Size(315, 478);
-                Panel_Carousel.TabIndex = 0; 
+                Panel_Carousel.TabIndex = 0;
                 Panel_Carousel.DoubleClick += (sender, e) =>
                 {
                     BetaFilm betaFilm = new BetaFilm(linkFilm);
@@ -126,3 +127,4 @@ namespace DoAn
         }
     }
 }
+

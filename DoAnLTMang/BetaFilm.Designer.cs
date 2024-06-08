@@ -44,6 +44,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.label9 = new System.Windows.Forms.Label();
+            this.tabCtrl = new System.Windows.Forms.TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
@@ -67,9 +68,9 @@
             this.label1.Location = new System.Drawing.Point(434, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 38);
+            this.label1.Size = new System.Drawing.Size(160, 38);
             this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.label1.Text = "Tên phim";
             // 
             // label2
             // 
@@ -145,9 +146,9 @@
             this.lbTheLoai.Location = new System.Drawing.Point(647, 342);
             this.lbTheLoai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTheLoai.Name = "lbTheLoai";
-            this.lbTheLoai.Size = new System.Drawing.Size(72, 27);
+            this.lbTheLoai.Size = new System.Drawing.Size(90, 27);
             this.lbTheLoai.TabIndex = 8;
-            this.lbTheLoai.Text = "label8";
+            this.lbTheLoai.Text = "Thể loại";
             // 
             // lbDienVien
             // 
@@ -168,9 +169,9 @@
             this.lbThoiLuong.Location = new System.Drawing.Point(647, 405);
             this.lbThoiLuong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbThoiLuong.Name = "lbThoiLuong";
-            this.lbThoiLuong.Size = new System.Drawing.Size(85, 27);
+            this.lbThoiLuong.Size = new System.Drawing.Size(122, 27);
             this.lbThoiLuong.TabIndex = 10;
-            this.lbThoiLuong.Text = "label10";
+            this.lbThoiLuong.Text = "Thời lượng";
             // 
             // lbDaoDien
             // 
@@ -179,9 +180,9 @@
             this.lbDaoDien.Location = new System.Drawing.Point(647, 192);
             this.lbDaoDien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbDaoDien.Name = "lbDaoDien";
-            this.lbDaoDien.Size = new System.Drawing.Size(85, 27);
+            this.lbDaoDien.Size = new System.Drawing.Size(98, 27);
             this.lbDaoDien.TabIndex = 11;
-            this.lbDaoDien.Text = "label11";
+            this.lbDaoDien.Text = "Đạo diễn";
             // 
             // lbNgonNgu
             // 
@@ -190,9 +191,9 @@
             this.lbNgonNgu.Location = new System.Drawing.Point(647, 478);
             this.lbNgonNgu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNgonNgu.Name = "lbNgonNgu";
-            this.lbNgonNgu.Size = new System.Drawing.Size(85, 27);
+            this.lbNgonNgu.Size = new System.Drawing.Size(107, 27);
             this.lbNgonNgu.TabIndex = 12;
-            this.lbNgonNgu.Text = "label12";
+            this.lbNgonNgu.Text = "Ngôn ngữ";
             // 
             // label8
             // 
@@ -220,12 +221,20 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(37, 552);
+            this.label9.Location = new System.Drawing.Point(27, 530);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(220, 27);
+            this.label9.Size = new System.Drawing.Size(126, 27);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Lịch chiếu hôm nay:";
+            this.label9.Text = "Lịch chiếu:";
+            // 
+            // tabCtrl
+            // 
+            this.tabCtrl.Location = new System.Drawing.Point(170, 530);
+            this.tabCtrl.Name = "tabCtrl";
+            this.tabCtrl.SelectedIndex = 0;
+            this.tabCtrl.Size = new System.Drawing.Size(927, 114);
+            this.tabCtrl.TabIndex = 17;
             // 
             // BetaFilm
             // 
@@ -233,6 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1384, 795);
+            this.Controls.Add(this.tabCtrl);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.label8);
@@ -278,5 +288,6 @@
         private System.Windows.Forms.Label label8;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TabControl tabCtrl;
     }
 }

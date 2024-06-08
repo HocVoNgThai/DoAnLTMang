@@ -127,7 +127,7 @@ namespace DoAn
                 Pbx_MoviePoster.TabStop = false;
                 Pbx_MoviePoster.ImageLocation = films[i].Link_Img;
                 Pbx_MoviePoster.SizeMode = PictureBoxSizeMode.StretchImage;
-                Pbx_MoviePoster.Click += (sender, e) =>
+                Pbx_MoviePoster.DoubleClick += (sender, e) =>
                 {
                     PictureBox pbx = sender as PictureBox;
                     foreach (dynamic json in list_detail_json_film)
@@ -153,7 +153,7 @@ namespace DoAn
                 Label_MovieName.Size = new System.Drawing.Size(286, 42);
                 Label_MovieName.TabIndex = films[i].Id;
                 Label_MovieName.Text = films[i].Film_Name;
-                Label_MovieName.Click += (sender, e) =>
+                Label_MovieName.DoubleClick += (sender, e) =>
                 {
                     Label lbl = sender as Label;
                     foreach (dynamic json in list_detail_json_film)
@@ -178,7 +178,7 @@ namespace DoAn
                 Panel_Carousel.Name = films[i].Id.ToString();
                 Panel_Carousel.Size = new System.Drawing.Size(315, 478);
                 Panel_Carousel.TabIndex = films[i].Id;
-                Panel_Carousel.Click += (sender, e) =>
+                Panel_Carousel.DoubleClick += (sender, e) =>
                 {
                     Panel pnl = sender as Panel;
                     foreach (dynamic json in list_detail_json_film)

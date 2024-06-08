@@ -11,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static DoAn.BetaCine;
 using static System.Net.WebRequestMethods;
 
 namespace DoAn
@@ -23,7 +22,7 @@ namespace DoAn
         string linkMovie;
         public BetaFilm(string linkFilm)
         {
-            InitializeComponent();     
+            InitializeComponent();
             linkMovie = linkFilm;
             Load_Movie();
         }
@@ -66,35 +65,48 @@ namespace DoAn
             {
                 webView21.CoreWebView2.Navigate(linkTrailer);
             }
-            var checkDateFilm = document.DocumentNode.SelectSingleNode("//*[@id=\"tab-content\"]/div");
-            var idDate = checkDateFilm.Attributes["id"].Value;
+
+            ////*[@id=\"tab-content\"]/div
+            var Schedule = document.DocumentNode.SelectNodes("//*[@id=\"ctl00\"]/div[1]/div[2]/div/ul/li/a");
+
+            //Check schedule
+            if (Schedule == null) return;
+            var dateFilms = Schedule.ToList();
+            //for(int i=0; i<dateFilms.Count;i++)
+            //{
+
+            //Check Date
+            var idDate = Schedule[0].Attributes["href"].Value;
+            idDate = idDate.Substring(1);
+            string Date = Schedule[0].InnerText;
             var timeFilm = document.DocumentNode.SelectNodes($"//*[@id=\"{idDate}\"]/div/div/a");
+            foreach (var tmp in timeFilm) Console.WriteLine(tmp.InnerHtml);
             if (timeFilm != null)
             {
                 var times = timeFilm.ToList();
-                List<string> lstTime = new List<string>();
-                foreach (HtmlNode time in times)
+
+                // Add tabPage
+                TabPage tabPg = new TabPage();
+                tabPg.Text = Date;
+                for (int j = 0; j < times.Count; j++)
                 {
-                    lstTime.Add(time.InnerText);
-                }
-                for (int i = 0; i < lstTime.Count; i++)
-                {
-                    Button button1 = new Button();
-                    button1.Location = new System.Drawing.Point(227 + 118 * (i % 5) + 50, 528 + 40 * (i / 5) + 20);
-                    button1.Name = "btnDatLich";
-                    button1.Size = new System.Drawing.Size(110, 40);
-                    button1.TabIndex = 17;
-                    button1.Text = lstTime[i];
-                    button1.UseVisualStyleBackColor = true;
-                    button1.Click += (sender, e) =>
+                    Button btn = new Button();
+                    btn.Location = new System.Drawing.Point(40 + 118 * (j % 5), 0 + 40 * (j / 5) + 20);
+                    btn.Name = "btnDatLich";
+                    btn.Size = new System.Drawing.Size(110, 40);
+                    btn.TabIndex = 17;
+                    btn.Text = times[j].InnerText;
+                    btn.UseVisualStyleBackColor = true;
+                    btn.Click += (sender, e) =>
                     {
 
                     };
-                    this.Controls.Add(button1);
+                    tabPg.Controls.Add(btn);
                 }
-            }
-        }
 
-        
+                this.tabCtrl.Controls.Add(tabPg);
+            }
+            //}
+        }
     }
 }
