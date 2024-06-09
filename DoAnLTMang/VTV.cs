@@ -9,6 +9,8 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32.TaskScheduler;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DoAn
 {
@@ -171,8 +173,25 @@ namespace DoAn
                     Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)))
                 };
                 panel.Controls.Add(lblGenre);
+                panel.DoubleClick += (sender, e) =>
+                {
+                    if (DateTime.Parse(show.Show_Time) < DateTime.Now)
+                    {
+                        MessageBox.Show("This show has already aired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Are you sure you want to schedule notifications for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                            == DialogResult.Yes)
+                        {
+                            string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
+                            string programInfo = "VTV chanel:\n" + lblTitle.Text + " at " + lblTime;
+                            CreateScheduledTask(show.Show_Title, DateTime.Parse(show.Show_Time).AddMinutes(-5), executablePath, programInfo);
+                            MessageBox.Show("Scheduled task created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
 
-                //MessageBox.Show(show.Show_Time,IsCurrentTimeWithinShowTime(currentTime, show.Show_Time, i < Shows.Count - 1 ? Shows[i + 1].Show_Time : null).ToString());
+                };
 
                 // So sánh thời gian hiện tại với thời gian của show
                 if (IsCurrentTimeWithinShowTime(currentTime.ToString("HH:mm"), show.Show_Time, i < Shows.Count - 1 ? Shows[i + 1].Show_Time : null))
@@ -187,8 +206,6 @@ namespace DoAn
             //MessageBox.Show(IsCurrentTimeWithinShowTime(currentTime.ToString("HH:mm"), "15:00", "15:50").ToString());
 
         }
-
-        
 
         private bool IsCurrentTimeWithinShowTime(string currentTime, string showStartTime, string showEndTime)
         {
@@ -214,6 +231,25 @@ namespace DoAn
 
             // Nếu không chuyển đổi được, trả về false
             return false;
+        }
+
+        public static void CreateScheduledTask(string taskName, DateTime startTime, string executablePath, string programInfo)
+        {
+            using (TaskService ts = new TaskService())
+            {
+                TaskDefinition td = ts.NewTask();
+                td.RegistrationInfo.Description = "The program you booked: " + taskName + " is about to premiere.";
+
+                // Create a trigger that will fire the task at the specified time
+                Trigger trigger = new TimeTrigger { StartBoundary = startTime };
+                td.Triggers.Add(trigger);
+
+                // Create an action that will launch the specified executable
+                td.Actions.Add(new ExecAction(executablePath, programInfo, null));
+
+                // Register the task in the root folder
+                ts.RootFolder.RegisterTaskDefinition("TV Show Reminder", td);
+            }
         }
     }
 }

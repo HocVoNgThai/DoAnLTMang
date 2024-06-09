@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\notifications\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T09:02:56.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwBEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T08:25:12.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T08:25:02.774Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

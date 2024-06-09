@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.TaskScheduler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -97,12 +98,45 @@ namespace DoAn
                 btn.UseVisualStyleBackColor = true;
                 btn.Click += (sender, e) =>
                 {
-
+                    if (DateTime.Parse(btn.Text) < DateTime.Now)
+                    {
+                        MessageBox.Show("This show has already aired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Are you sure you want to schedule notifications for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                            == DialogResult.Yes)
+                        {
+                            string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
+                            string programInfo = "CPQG cinema:\n" + label1.Text + " at " + btn.Text;
+                            CreateScheduledTask(label1.Text, DateTime.Parse(btn.Text).AddMinutes(-5), executablePath, programInfo);
+                            MessageBox.Show("Scheduled task created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
                 };
                 tabPg.Controls.Add(btn);
             }
 
             this.tabCtrl.Controls.Add(tabPg);
+        }
+
+        public static void CreateScheduledTask(string taskName, DateTime startTime, string executablePath, string programInfo)
+        {
+            using (TaskService ts = new TaskService())
+            {
+                TaskDefinition td = ts.NewTask();
+                td.RegistrationInfo.Description = "The program you booked: " + taskName + " is about to premiere.";
+
+                // Create a trigger that will fire the task at the specified time
+                Trigger trigger = new TimeTrigger { StartBoundary = startTime };
+                td.Triggers.Add(trigger);
+
+                // Create an action that will launch the specified executable
+                td.Actions.Add(new ExecAction(executablePath, programInfo, null));
+
+                // Register the task in the root folder
+                ts.RootFolder.RegisterTaskDefinition("TV Show Reminder", td);
+            }
         }
     }
 }

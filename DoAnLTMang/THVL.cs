@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32.TaskScheduler;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -230,6 +231,25 @@ namespace DoAn
                     Font = new Font("Microsoft Sans Serif", 10.8F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)))
                 };
                 panel.Controls.Add(lblTitle);
+                panel.DoubleClick += (sender, e) =>
+                {
+                    if (DateTime.Parse(show.Show_Time) < DateTime.Now)
+                    {
+                        MessageBox.Show("This show has already aired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("Are you sure you want to schedule notifications for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                            == DialogResult.Yes)
+                        {
+                            string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
+                            string programInfo = "THVL chanel:\n" + lblTitle.Text + " at " + lblTime;
+                            CreateScheduledTask(show.Show_Title, DateTime.Parse(show.Show_Time).AddMinutes(-5), executablePath, programInfo);
+                            MessageBox.Show("Scheduled task created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+
+                };
 
                 //MessageBox.Show(show.Show_Time,IsCurrentTimeWithinShowTime(currentTime, show.Show_Time, i < Shows.Count - 1 ? Shows[i + 1].Show_Time : null).ToString());
 
@@ -273,5 +293,25 @@ namespace DoAn
             // Nếu không chuyển đổi được, trả về false
             return false;
         }
+
+        public static void CreateScheduledTask(string taskName, DateTime startTime, string executablePath, string programInfo)
+        {
+            using (TaskService ts = new TaskService())
+            {
+                TaskDefinition td = ts.NewTask();
+                td.RegistrationInfo.Description = "The program you booked: " + taskName + " is about to premiere.";
+
+                // Create a trigger that will fire the task at the specified time
+                Trigger trigger = new TimeTrigger { StartBoundary = startTime };
+                td.Triggers.Add(trigger);
+
+                // Create an action that will launch the specified executable
+                td.Actions.Add(new ExecAction(executablePath, programInfo, null));
+
+                // Register the task in the root folder
+                ts.RootFolder.RegisterTaskDefinition("TV Show Reminder", td);
+            }
+        }
     }
 }
+
