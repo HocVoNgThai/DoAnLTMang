@@ -12,18 +12,10 @@ namespace Notifications
 {
     public partial class Form1 : Form
     {
-        public Form1(string[] args)
+        public Form1()
         {
             InitializeComponent();
-            if (args.Length > 0)
-            {
-                string message = string.Join(" ", args);
-                MessageBox.Show(message, "TV Show Reminder", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("No information provided.", "TV Show Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            richTextBox1.Text = "TV Show Remider\n";
         }
     }
 }

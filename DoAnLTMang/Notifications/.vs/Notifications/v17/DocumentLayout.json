@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\notifications\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|d:\\phamthienan\\tai_lieu_mon_hoc\\project_ltmcb\\doanltmang\\doanltmang\\notifications\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8148EED6-70A7-446C-B97D-8C6D0103C1E7}|Notifications.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -40,9 +40,10 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBIAAAAvAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T09:02:56.027Z"
+              "WhenOpened": "2024-06-09T09:02:56.027Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -52,7 +53,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAQwBEAAAAMAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwBEAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T08:25:12.579Z",
               "EditorCaption": ""
@@ -66,7 +67,8 @@
               "ToolTip": "D:\\phamthienan\\TAI_LIEU_MON_HOC\\Project_LTMCB\\DoAnLTMang\\DoAnLTMang\\Notifications\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T08:25:02.774Z"
+              "WhenOpened": "2024-06-09T08:25:02.774Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

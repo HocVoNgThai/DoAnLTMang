@@ -164,8 +164,7 @@ namespace DoAn
                             == DialogResult.Yes)
                         {
                             string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
-                            string programInfo = "HTV chanel:\n" + lblTitle.Text + " at " + lblTime;
-                            CreateScheduledTask(show.Show_Title, DateTime.Parse(show.Show_Time).AddMinutes(-5), executablePath, programInfo);
+                            CreateScheduledTask(show.Show_Title, DateTime.Parse(show.Show_Time).AddMinutes(-5), executablePath);
                             MessageBox.Show("Scheduled task created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
@@ -219,7 +218,7 @@ namespace DoAn
 
         }
 
-        public static void CreateScheduledTask(string taskName, DateTime startTime, string executablePath, string programInfo)
+        public static void CreateScheduledTask(string taskName, DateTime startTime, string executablePath)
         {
             using (TaskService ts = new TaskService())
             {
@@ -233,14 +232,15 @@ namespace DoAn
                     EndBoundary = startTime.AddMinutes(10) // Set EndBoundary to 10 minutes after StartBoundary
                 };
                 td.Triggers.Add(trigger);
+                td.Settings.DeleteExpiredTaskAfter = TimeSpan.FromMinutes(15); // Delete the task 10 minutes after it has run
 
                 // Create an action that will launch the specified executable
-                td.Actions.Add(new ExecAction(executablePath, programInfo, null));
-                td.Settings.DeleteExpiredTaskAfter = TimeSpan.FromMinutes(10); // Delete the task 1 minute after it has run
-
+                td.Actions.Add(new ExecAction(executablePath, null, null));
+                td.Principal.UserId = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+                td.Principal.LogonType = TaskLogonType.InteractiveToken;
+                td.Principal.RunLevel = TaskRunLevel.Highest;
                 // Register the task in the root folder
-                string TName = "TV Show Reminder " + Convert.ToString(DateTime.Today.ToShortDateString());
-                TName = TName.Replace("/", "-");
+                string TName = "TV Show Reminder " + DateTime.Now.ToString("MdyyyyHmmss");
                 ts.RootFolder.RegisterTaskDefinition(TName, td);
             }
         }

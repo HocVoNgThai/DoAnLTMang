@@ -8,3 +8,7 @@ D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notification
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.csproj.CoreCompileInputs.cache
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.exe
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.pdb
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\bin\Debug\Notifications.exe.manifest
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\bin\Debug\Notifications.application
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.exe.manifest
+D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.application
