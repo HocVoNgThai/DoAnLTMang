@@ -1,4 +1,4 @@
-﻿namespace DoAn
+namespace DoAn
 {
     partial class BetaCine
     {
@@ -48,11 +48,11 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(58, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(669, 39);
+            this.label1.Size = new System.Drawing.Size(648, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách phim đang chiếu tại rạp Beta";
             // 
-            // Form1
+            // BetaCine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -64,7 +64,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1080, 800);
             this.MinimumSize = new System.Drawing.Size(1080, 800);
-            this.Name = "Form1";
+            this.Name = "BetaCine";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.ResumeLayout(false);

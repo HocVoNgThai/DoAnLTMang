@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HtmlAgilityPack;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using static DoAn.BetaCine;
 using static System.Net.WebRequestMethods;
 
 namespace DoAn
@@ -22,7 +22,7 @@ namespace DoAn
         string linkMovie;
         public BetaFilm(string linkFilm)
         {
-            InitializeComponent();     
+            InitializeComponent();
             linkMovie = linkFilm;
             Load_Movie();
         }
@@ -61,10 +61,52 @@ namespace DoAn
             var trailer = document.DocumentNode.SelectSingleNode("//*[@id=\"ctl00\"]/div/div/div/div/iframe");
             var linkTrailer = trailer.Attributes["src"].Value;
             MessageBox.Show("Connect successful");
-            if (webView21 != null && webView21.CoreWebView2 != null)
+            if (webView21 != null && webView21.CoreWebView2 != null && !string.IsNullOrEmpty(linkTrailer))
             {
                 webView21.CoreWebView2.Navigate(linkTrailer);
             }
+
+            ////*[@id=\"tab-content\"]/div
+            var Schedule = document.DocumentNode.SelectNodes("//*[@id=\"ctl00\"]/div[1]/div[2]/div/ul/li/a");
+
+            //Check schedule
+            if (Schedule == null) return;
+            var dateFilms = Schedule.ToList();
+            //for(int i=0; i<dateFilms.Count;i++)
+            //{
+
+            //Check Date
+            var idDate = Schedule[0].Attributes["href"].Value;
+            idDate = idDate.Substring(1);
+            string Date = Schedule[0].InnerText;
+            var timeFilm = document.DocumentNode.SelectNodes($"//*[@id=\"{idDate}\"]/div/div/a");
+            foreach (var tmp in timeFilm) Console.WriteLine(tmp.InnerHtml);
+            if (timeFilm != null)
+            {
+                var times = timeFilm.ToList();
+
+                // Add tabPage
+                TabPage tabPg = new TabPage();
+                tabPg.Text = Date;
+                for (int j = 0; j < times.Count; j++)
+                {
+                    Button btn = new Button();
+                    btn.Location = new System.Drawing.Point(40 + 118 * (j % 5), 0 + 40 * (j / 5) + 20);
+                    btn.Name = "btnDatLich";
+                    btn.Size = new System.Drawing.Size(110, 40);
+                    btn.TabIndex = 17;
+                    btn.Text = times[j].InnerText;
+                    btn.UseVisualStyleBackColor = true;
+                    btn.Click += (sender, e) =>
+                    {
+
+                    };
+                    tabPg.Controls.Add(btn);
+                }
+
+                this.tabCtrl.Controls.Add(tabPg);
+            }
+            //}
         }
     }
 }
