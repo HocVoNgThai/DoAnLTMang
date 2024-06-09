@@ -104,12 +104,17 @@ namespace DoAn
                         {
                             MessageBox.Show("This show has already aired.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                        else if (DateTime.Parse(btn.Text) < DateTime.Now.AddMinutes(5))
+                        {
+                            MessageBox.Show("This show is about to start.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         else
                         {
                             if (MessageBox.Show("Are you sure you want to schedule notifications for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                                 == DialogResult.Yes)
                             {
                                 string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
+                                MessageBox.Show(executablePath);
                                 string programInfo = "BetaFilm cenima:\n" + label1.Text + " at " + btn.Text;
                                 CreateScheduledTask(label1.Text, DateTime.Parse(btn.Text).AddMinutes(-5), executablePath, programInfo);
                                 MessageBox.Show("Scheduled task created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -132,14 +137,21 @@ namespace DoAn
                 td.RegistrationInfo.Description = "The program you booked: " + taskName + " is about to premiere.";
 
                 // Create a trigger that will fire the task at the specified time
-                Trigger trigger = new TimeTrigger { StartBoundary = startTime };
+                TimeTrigger trigger = new TimeTrigger()
+                {
+                    StartBoundary = startTime,
+                    EndBoundary = startTime.AddMinutes(10) // Set EndBoundary to 10 minutes after StartBoundary
+                };
                 td.Triggers.Add(trigger);
 
                 // Create an action that will launch the specified executable
                 td.Actions.Add(new ExecAction(executablePath, programInfo, null));
+                td.Settings.DeleteExpiredTaskAfter = TimeSpan.FromMinutes(10); // Delete the task 1 minute after it has run
 
                 // Register the task in the root folder
-                ts.RootFolder.RegisterTaskDefinition("TV Show Reminder", td);
+                string TName = "TV Show Reminder " + Convert.ToString(DateTime.Today.ToShortDateString());
+                TName = TName.Replace("/", "-");
+                ts.RootFolder.RegisterTaskDefinition(TName, td);
             }
         }
     }
