@@ -20,6 +20,7 @@ namespace DoAn
             public string Name { get; set; }
             public string Description { get; set; }
             public string Triggers { get; set; }
+            public int LastRunResult { get; set; }
             public string DisplayName => $"{Name} - {Triggers} - {Description}";
         }
         public ManageSchedule()
@@ -55,6 +56,16 @@ namespace DoAn
                         // Tạo node cho definition của task
                         TreeNode definitionNode = new TreeNode("Definition: " + taskInfo.Description);
                         taskNode.Nodes.Add(definitionNode);
+                        if (taskInfo.LastRunResult == 0)
+                        {
+                            TreeNode lastRunResultNode = new TreeNode("State: The operation completed successfully!");
+                            taskNode.Nodes.Add(lastRunResultNode);
+                        }     
+                        else
+                        {
+                            TreeNode lastRunResultNode = new TreeNode("State: The task has not yet run!");
+                            taskNode.Nodes.Add(lastRunResultNode);
+                        }
                     }
                     if(taskInfos.Count > 0)
                     {
@@ -78,15 +89,17 @@ namespace DoAn
             foreach (Microsoft.Win32.TaskScheduler.Task task in folder.Tasks)
             {
                 string description = task.Definition.RegistrationInfo.Description;
-                string triggers = string.Join("; ", task.Definition.Triggers.Select(t => t.ToString()));
-
+                //string triggers = string.Join("; ", task.Definition.Triggers.Select(t => t.ToString()));
+                string triggers = task.Definition.Triggers.ToString();
+                int state = task.LastTaskResult;
                 if (task.Name.StartsWith("Show Reminder"))
                 {
                     taskInfos.Add(new TaskInfo
                     {
                         Name = task.Name,
                         Description = description,
-                        Triggers = triggers
+                        Triggers = triggers,
+                        LastRunResult = state
                     });
                 } 
             }
@@ -116,7 +129,9 @@ namespace DoAn
                 }
                 if (count > 0)
                 {
-                    lbNotify.Text = $"Có {count} chương trình được đặt thông báo";
+                    if (count == 1)
+                        lbNotify.Text = $"Having {count} program with notification set";
+                    else lbNotify.Text = $"Having {count} programs with notification set";
                 }
                 else
                 {
