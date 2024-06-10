@@ -121,6 +121,9 @@
   <data name="NCC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\NCC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BETA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\BETA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VTVlogo-finish" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\VTVlogo-finish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,7 +133,7 @@
   <data name="HTVicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\HTVicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BETA1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\BETA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Manage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Manage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

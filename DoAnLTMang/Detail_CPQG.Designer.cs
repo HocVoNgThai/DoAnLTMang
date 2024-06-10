@@ -198,7 +198,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 700);
+            this.label8.Location = new System.Drawing.Point(25, 718);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 38);
             this.label8.TabIndex = 14;
@@ -209,10 +209,10 @@
             this.webView21.AllowExternalDrop = true;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(286, 700);
+            this.webView21.Location = new System.Drawing.Point(286, 718);
             this.webView21.Margin = new System.Windows.Forms.Padding(3, 3, 40, 3);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(805, 436);
+            this.webView21.Size = new System.Drawing.Size(805, 418);
             this.webView21.Source = new System.Uri("https://youtube.com", System.UriKind.Absolute);
             this.webView21.TabIndex = 15;
             this.webView21.ZoomFactor = 1D;
@@ -222,7 +222,7 @@
             this.tabCtrl.Location = new System.Drawing.Point(179, 556);
             this.tabCtrl.Name = "tabCtrl";
             this.tabCtrl.SelectedIndex = 0;
-            this.tabCtrl.Size = new System.Drawing.Size(923, 114);
+            this.tabCtrl.Size = new System.Drawing.Size(923, 138);
             this.tabCtrl.TabIndex = 19;
             // 
             // label9

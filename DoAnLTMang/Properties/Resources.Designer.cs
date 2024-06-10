@@ -63,16 +63,6 @@ namespace DoAn.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BETA {
-            get {
-                object obj = ResourceManager.GetObject("BETA", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BETA1 {
             get {
                 object obj = ResourceManager.GetObject("BETA1", resourceCulture);
@@ -86,6 +76,16 @@ namespace DoAn.Properties {
         internal static System.Drawing.Bitmap HTVicon {
             get {
                 object obj = ResourceManager.GetObject("HTVicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Manage {
+            get {
+                object obj = ResourceManager.GetObject("Manage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -46,5 +46,11 @@ namespace DoAn
             CPQG cPQG = new CPQG(); 
             cPQG.ShowDialog();
         }
+
+        private void btnManage_Click(object sender, EventArgs e)
+        {
+            ManageSchedule manageSchedule = new ManageSchedule();
+            manageSchedule.ShowDialog();
+        }
     }
 }

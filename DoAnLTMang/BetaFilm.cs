@@ -110,7 +110,7 @@ namespace DoAn
                         }
                         else
                         {
-                            if (MessageBox.Show("Are you sure you want to schedule notifications for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                            if (MessageBox.Show("Are you sure you want to schedule notification for this program?", "Recheck", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                                 == DialogResult.Yes)
                             {
                                 string executablePath = Path.Combine(Application.StartupPath, "Notifications.exe");
