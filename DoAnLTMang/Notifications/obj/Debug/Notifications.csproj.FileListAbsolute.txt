@@ -12,3 +12,16 @@ D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notification
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\bin\Debug\Notifications.application
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.exe.manifest
 D:\phamthienan\TAI_LIEU_MON_HOC\Project_LTMCB\DoAnLTMang\DoAnLTMang\Notifications\obj\Debug\Notifications.application
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.csproj.AssemblyReference.cache
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.Properties.Resources.resources
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.csproj.GenerateResource.cache
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.csproj.CoreCompileInputs.cache
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.exe
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.pdb
+E:\DoAn\DoAnLTMang\Notifications\bin\Debug\Notifications.exe.config
+E:\DoAn\DoAnLTMang\Notifications\bin\Debug\Notifications.exe.manifest
+E:\DoAn\DoAnLTMang\Notifications\bin\Debug\Notifications.application
+E:\DoAn\DoAnLTMang\Notifications\bin\Debug\Notifications.exe
+E:\DoAn\DoAnLTMang\Notifications\bin\Debug\Notifications.pdb
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.exe.manifest
+E:\DoAn\DoAnLTMang\Notifications\obj\Debug\Notifications.application

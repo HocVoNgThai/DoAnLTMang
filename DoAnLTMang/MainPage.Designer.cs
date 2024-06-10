@@ -77,7 +77,7 @@
             this.btnManage.BackColor = System.Drawing.Color.Silver;
             this.btnManage.BackgroundImage = global::DoAn.Properties.Resources.Manage;
             this.btnManage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnManage.Location = new System.Drawing.Point(290, 642);
+            this.btnManage.Location = new System.Drawing.Point(301, 642);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(111, 72);
             this.btnManage.TabIndex = 8;

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Notifications.exe" size="8672">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Notifications.exe" size="7136">
       <assemblyIdentity name="Notifications" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aMmC/SX5ecAPvtyX7CBxxSIMPSiwqErZPEX6kY6EWS0=</dsig:DigestValue>
+        <dsig:DigestValue>GfeyFD+G4G9nwkV2bSuqe4AcSrWWNG73Q6J6Zh1O1ZU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

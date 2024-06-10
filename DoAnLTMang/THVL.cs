@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -308,18 +309,22 @@ namespace DoAn
                 TimeTrigger trigger = new TimeTrigger()
                 {
                     StartBoundary = startTime,
-                    EndBoundary = startTime.AddMinutes(10) // Set EndBoundary to 10 minutes after StartBoundary
+                    EndBoundary = startTime.AddMinutes(15) // Set EndBoundary to 10 minutes after StartBoundary
                 };
                 td.Triggers.Add(trigger);
                 td.Settings.DeleteExpiredTaskAfter = TimeSpan.FromMinutes(15); // Delete the task 10 minutes after it has run
+                ExecAction action = new ExecAction();
+                action.Path = executablePath;
+                string modifiedTaskName = Regex.Replace(taskName, @"\s+", "_");
 
+                action.Arguments = modifiedTaskName;
                 // Create an action that will launch the specified executable
-                td.Actions.Add(new ExecAction(executablePath, null, null));
+                td.Actions.Add(action);
                 td.Principal.UserId = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
                 td.Principal.LogonType = TaskLogonType.InteractiveToken;
                 td.Principal.RunLevel = TaskRunLevel.Highest;
                 // Register the task in the root folder
-                string TName = "TV Show Reminder " + DateTime.Now.ToString("MdyyyyHmmss");
+                string TName = "Show Reminder " + DateTime.Now.ToString("MdyyyyHmmss");
                 ts.RootFolder.RegisterTaskDefinition(TName, td);
             }
         }

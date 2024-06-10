@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static DoAn.ManageSchedule;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DoAn
@@ -26,13 +27,14 @@ namespace DoAn
             InitializeComponent();
             LoadTaskScheduler();
         }
+        List<TaskInfo> taskInfos = new List<TaskInfo>();
         private void LoadTaskScheduler()
         {
             try
             {
                 using (TaskService ts = new TaskService())
                 {
-                    List<TaskInfo> taskInfos = new List<TaskInfo>();
+                    
 
                     // Lấy tất cả các folder trong Task Scheduler
                     GetTasksFromFolder(ts.RootFolder, taskInfos);
@@ -78,7 +80,7 @@ namespace DoAn
                 string description = task.Definition.RegistrationInfo.Description;
                 string triggers = string.Join("; ", task.Definition.Triggers.Select(t => t.ToString()));
 
-                if (task.Name.StartsWith("TV Show Reminder"))
+                if (task.Name.StartsWith("Show Reminder"))
                 {
                     taskInfos.Add(new TaskInfo
                     {
@@ -104,6 +106,22 @@ namespace DoAn
             {
                 DeleteTask(nodeToRemove.Text);
                 nodeToRemove.Remove();
+                int count = 0;
+                foreach (TreeNode node in treeViewTask.Nodes)
+                {
+                    if (node.Nodes.Count > 0)
+                    {
+                        count++;
+                    }
+                }
+                if (count > 0)
+                {
+                    lbNotify.Text = $"Có {count} chương trình được đặt thông báo";
+                }
+                else
+                {
+                    lbNotify.Text = "Không có chương trình nào được đặt thông báo";
+                }
             }
         }
         private void DeleteTask(string taskName)
@@ -123,6 +141,7 @@ namespace DoAn
                         MessageBox.Show($"Task '{taskName}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+
             }
             catch (Exception ex)
             {
